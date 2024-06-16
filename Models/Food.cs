@@ -1,5 +1,7 @@
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
+
+namespace FoodAPI.Models;
 public class Food {
     [BsonId]
     [BsonRepresentation(BsonType.ObjectId)]

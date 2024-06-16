@@ -1,6 +1,8 @@
 using MongoDB.Bson.Serialization.Attributes;
 
-public class Nutrition {
+namespace FoodAPI.Models;
+public class Nutrition
+{
     [BsonElement("calories")]
     public int Calories { get; set; }
 
