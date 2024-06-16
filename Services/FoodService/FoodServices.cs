@@ -1,6 +1,6 @@
 using FoodAPI.Config;
-using FoodAPI.Database;
 using FoodAPI.Models;
+using FoodAPI.Services.Database;
 using Microsoft.Extensions.Options;
 using MongoDB.Bson;
 using MongoDB.Driver;

@@ -1,5 +1,5 @@
 using FoodAPI.Config;
-using FoodAPI.Database;
+using FoodAPI.Services.Database;
 using FoodAPI.Services.FoodService;
 using FoodAPI.Services.Security;
 
@@ -16,7 +16,8 @@ builder.Services.AddControllers()
     .AddJsonOptions(options =>
     {
 
-    }).AddMvcOptions(options =>
+    })
+    .AddMvcOptions(options =>
     {
         options.OutputFormatters.RemoveType<Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter>();
         options.OutputFormatters.RemoveType<Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter>();

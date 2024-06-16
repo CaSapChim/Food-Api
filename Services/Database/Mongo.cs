@@ -2,9 +2,9 @@ using FoodAPI.Config;
 using Microsoft.Extensions.Options;
 using MongoDB.Driver;
 
-namespace FoodAPI.Database;
+namespace FoodAPI.Services.Database;
 
-public class MongoDatabase 
+public class MongoDatabase
 {
     private static MongoClient mongoClient = null!;
     private static IMongoDatabase mongoDatabase = null!;
@@ -18,5 +18,5 @@ public class MongoDatabase
     {
         return mongoDatabase.GetCollection<T>(collectionName);
     }
-    
+
 }
