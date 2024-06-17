@@ -12,7 +12,7 @@ public class MongoDatabase
     {
         mongoClient = new MongoClient(databaseSettings.Value.ConnectionString);
         mongoDatabase = mongoClient.GetDatabase(databaseSettings.Value.DatabaseName);
-    }
+    } 
 
     public IMongoCollection<T> GetCollection<T>(string collectionName)
     {

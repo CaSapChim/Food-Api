@@ -8,7 +8,7 @@ public class FoodController(FoodServices foodServices) : BaseController
     private readonly FoodServices _foodService = foodServices;
 
     [HttpGet]
-    public async Task<List<Food>> Get()
+    public async Task<List<FoodInDatabase>> Get()
     {
         var foods = await _foodService.GetFoods();
         return foods;
@@ -37,7 +37,7 @@ public class FoodController(FoodServices foodServices) : BaseController
     }
 
     [HttpPost]
-    public async Task<IActionResult> Post(Food newFood)
+    public async Task<IActionResult> Post(FoodPost newFood)
     {
         await _foodService.CreateFood(newFood);
         return CreatedAtAction(nameof(Get), newFood);
